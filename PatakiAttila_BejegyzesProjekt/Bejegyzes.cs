@@ -25,6 +25,7 @@ namespace PatakiAttila_BejegyzesProjekt
 
         public string Szerzo { get => szerzo; }
         public string Tartalom { get => tartalom; set => tartalom = value; }
+
         public int Like { get => like; }
         public DateTime Letrejott { get => letrejott; }
         public DateTime Szerkesztve { get => szerkesztve; }
@@ -33,5 +34,20 @@ namespace PatakiAttila_BejegyzesProjekt
         {
             this.like++;
         }
+
+        public override string ToString()
+        {
+            string tostring =$"{this.szerzo} - {this.like} - {this.letrejott} \n";
+            if (this.letrejott!=this.szerkesztve)
+            {
+                tostring += $"Szerkesztve {this.szerkesztve} \n";
+            }
+            tostring += $" {this.tartalom}";
+
+
+            return tostring;
+        }
+
+
     }
 }
