@@ -20,16 +20,16 @@ namespace PatakiAttila_BejegyzesProjekt
             Beolv();
             Likeosztas();
             Atiras();
-            for (int i = 0; i < beir.Count; i++)
-            {
-                Console.WriteLine(beir[i]);
-            }
+            /* for (int i = 0; i < beir.Count; i++)
+             {
+                 Console.WriteLine(beir[i]);
+             }
 
-            for (int i = 0; i < bejegyzes.Count; i++)
-            {
-                Console.WriteLine(bejegyzes[i]);
-            }
-
+             for (int i = 0; i < bejegyzes.Count; i++)
+             {
+                 Console.WriteLine(bejegyzes[i]);
+             } */
+            Legnepszerubb();
         }
 
         private void ListaFeltolt()
@@ -96,6 +96,21 @@ namespace PatakiAttila_BejegyzesProjekt
             bejegyzes[1].Tartalom = szoveg;
      
 
+        }
+
+        private void Legnepszerubb()
+        {
+            int max = int.MinValue;
+            int a = -1;
+            for (int i = 0; i < beir.Count; i++)
+            {
+                if (max<beir[i].Like)
+                {
+                    max=beir[i].Like;
+                    a = i;
+                }
+            }
+            Console.WriteLine(beir[a].Like);
         }
 
     }
