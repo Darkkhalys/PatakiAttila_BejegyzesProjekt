@@ -20,6 +20,15 @@ namespace PatakiAttila_BejegyzesProjekt
             Beolv();
             Likeosztas();
             Atiras();
+            for (int i = 0; i < beir.Count; i++)
+            {
+                Console.WriteLine(beir[i]);
+            }
+
+            for (int i = 0; i < bejegyzes.Count; i++)
+            {
+                Console.WriteLine(bejegyzes[i]);
+            }
 
         }
 
@@ -85,8 +94,7 @@ namespace PatakiAttila_BejegyzesProjekt
             Console.WriteLine("Kérek egy szöveget");
             string szoveg = Console.ReadLine();
             bejegyzes[1].Tartalom = szoveg;
-
-           
+     
 
         }
 
