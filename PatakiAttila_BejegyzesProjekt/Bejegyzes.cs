@@ -8,11 +8,14 @@ namespace PatakiAttila_BejegyzesProjekt
 {
     internal class Bejegyzes
     {
+
         private string szerzo;
         private string tartalom;
         private int like;
         private DateTime letrejott;
         private DateTime szerkesztve;
+        private List<Bejegyzes> bejegyzes;
+        private List<Bejegyzes> beir;
 
         public Bejegyzes(string szerzo, string tartalom)
         {
