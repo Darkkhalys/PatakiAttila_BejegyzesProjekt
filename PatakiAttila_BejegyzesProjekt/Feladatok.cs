@@ -18,7 +18,7 @@ namespace PatakiAttila_BejegyzesProjekt
             bejegyzes = new List<Bejegyzes>();
             ListaFeltolt();
             Beolv();
-            Console.WriteLine(bejegyzes.Count); 
+            Likeosztas();
         }
 
         private void ListaFeltolt()
@@ -40,7 +40,7 @@ namespace PatakiAttila_BejegyzesProjekt
                     string tartalom = Console.ReadLine();
                     Bejegyzes b1 = new Bejegyzes(szerzo, tartalom);
                     beir.Add(b1);
-
+                    
                     
 
                     
@@ -65,7 +65,21 @@ namespace PatakiAttila_BejegyzesProjekt
             }
         }
 
+        private void Likeosztas()
+        {
+            Random r = new Random();
+            int szam;
+            for (int i = 0; i < beir.Count*20; i++)
+            {
+                szam= r.Next(0,beir.Count);
+                beir[szam].Likenovelese();
 
+            }
+            for (int i = 0; i < beir.Count; i++)
+            {
+                Console.WriteLine(beir[i].ToString()); 
+            }
+        }
 
     }
 }
