@@ -30,6 +30,7 @@ namespace PatakiAttila_BejegyzesProjekt
                  Console.WriteLine(bejegyzes[i]);
              } */
             Legnepszerubb();
+            Nepszeru();
         }
 
         private void ListaFeltolt()
@@ -113,5 +114,26 @@ namespace PatakiAttila_BejegyzesProjekt
             Console.WriteLine(beir[a].Like);
         }
 
+        private void Nepszeru()
+        {
+            bool nepszeru=false;
+
+            for (int i = 0; i < beir.Count; i++)
+            {
+                if (beir[i].Like>=35)
+                {
+                    nepszeru = true;
+                }
+            }
+
+            if (nepszeru==true)
+            {
+                Console.WriteLine("Van olyan bejegyzés ami 35-nél több like-ot kapott");
+            }
+            else
+            {
+                Console.WriteLine("Nincs olyan bejegyzés mi 35-nél több like-ot kapott");
+            }
+        }
     }
 }
