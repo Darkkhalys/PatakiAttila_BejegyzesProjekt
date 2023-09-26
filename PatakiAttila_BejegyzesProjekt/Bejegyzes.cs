@@ -14,8 +14,7 @@ namespace PatakiAttila_BejegyzesProjekt
         private int like;
         private DateTime letrejott;
         private DateTime szerkesztve;
-        private List<Bejegyzes> bejegyzes;
-        private List<Bejegyzes> beir;
+
 
         public Bejegyzes(string szerzo, string tartalom)
         {
@@ -52,5 +51,12 @@ namespace PatakiAttila_BejegyzesProjekt
         }
 
 
+        
+
+
+
+
+
+        
     }
 }
