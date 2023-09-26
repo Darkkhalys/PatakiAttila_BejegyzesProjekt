@@ -20,18 +20,19 @@ namespace PatakiAttila_BejegyzesProjekt
             Beolv();
             Likeosztas();
             Atiras();
-            /* for (int i = 0; i < beir.Count; i++)
+             for (int i = 0; i < beir.Count; i++)
              {
                  Console.WriteLine(beir[i]);
              }
-
+             
              for (int i = 0; i < bejegyzes.Count; i++)
              {
                  Console.WriteLine(bejegyzes[i]);
-             } */
+             } 
             Legnepszerubb();
             Nepszeru();
             KevesLajk();
+            Rendezes();
         }
 
         private void ListaFeltolt()
@@ -152,5 +153,49 @@ namespace PatakiAttila_BejegyzesProjekt
 
 
         }
+
+        private void Rendezes()
+        {
+            List<Bejegyzes> Rendezett = new List<Bejegyzes>();
+
+            for (int i = 0; i < beir.Count; i++)
+            {
+                Rendezett.Add(beir[i]);
+            }
+
+            for (int i = 0; i < Rendezett.Count; i++)
+            {
+                for (int j = 0; j < Rendezett.Count; j++)
+                {
+                    if (Rendezett[i].Like > Rendezett[j].Like)
+                    {
+                        Bejegyzes valtozo = Rendezett[i];
+                        Rendezett[i] = Rendezett[j];
+                        Rendezett[j] = valtozo;
+                    }
+                }
+            }
+
+            for (int i = 0; i < Rendezett.Count; i++)
+            {
+                Console.WriteLine(Rendezett[i]);
+            }
+
+            StreamWriter sw = new StreamWriter("bejegyzesek_rendezett.txt");
+            for (int i = 0; i < Rendezett.Count; i++)
+            {
+                sw.WriteLine(Rendezett[i]);
+            }
+
+
+            sw.Close();
+        }
+
+
+
+
+
+
+
     }
 }
