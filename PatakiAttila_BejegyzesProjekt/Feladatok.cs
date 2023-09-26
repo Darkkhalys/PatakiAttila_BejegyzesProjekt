@@ -15,7 +15,10 @@ namespace PatakiAttila_BejegyzesProjekt
         public Feladatok()
         {
             beir = new List<Bejegyzes>();
+            bejegyzes = new List<Bejegyzes>();
             ListaFeltolt();
+            Beolv();
+            Console.WriteLine(bejegyzes.Count); 
         }
 
         private void ListaFeltolt()
