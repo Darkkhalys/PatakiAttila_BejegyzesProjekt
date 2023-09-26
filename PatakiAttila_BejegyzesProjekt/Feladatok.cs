@@ -19,6 +19,8 @@ namespace PatakiAttila_BejegyzesProjekt
             ListaFeltolt();
             Beolv();
             Likeosztas();
+            Atiras();
+
         }
 
         private void ListaFeltolt()
@@ -75,10 +77,17 @@ namespace PatakiAttila_BejegyzesProjekt
                 beir[szam].Likenovelese();
 
             }
-            for (int i = 0; i < beir.Count; i++)
-            {
-                Console.WriteLine(beir[i].ToString()); 
-            }
+            
+        }
+
+        private void Atiras()
+        {
+            Console.WriteLine("Kérek egy szöveget");
+            string szoveg = Console.ReadLine();
+            bejegyzes[1].Tartalom = szoveg;
+
+            
+
         }
 
     }
