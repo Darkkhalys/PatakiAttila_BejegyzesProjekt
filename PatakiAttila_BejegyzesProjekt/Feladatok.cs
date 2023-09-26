@@ -86,7 +86,7 @@ namespace PatakiAttila_BejegyzesProjekt
             string szoveg = Console.ReadLine();
             bejegyzes[1].Tartalom = szoveg;
 
-            
+           
 
         }
 

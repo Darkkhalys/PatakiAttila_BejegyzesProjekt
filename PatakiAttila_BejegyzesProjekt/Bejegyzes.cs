@@ -26,7 +26,16 @@ namespace PatakiAttila_BejegyzesProjekt
         }
 
         public string Szerzo { get => szerzo; }
-        public string Tartalom { get => tartalom; set => tartalom = value; }
+        public string Tartalom
+        {
+            get => tartalom;
+            set
+            {
+                tartalom = value;
+                szerkesztve = DateTime.Now;
+                
+            }
+        }
 
         public int Like { get => like; }
         public DateTime Letrejott { get => letrejott; }
