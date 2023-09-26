@@ -10,6 +10,13 @@ namespace PatakiAttila_BejegyzesProjekt
     {
         static void Main(string[] args)
         {
+
+
+
+
+
+
+            Console.ReadKey();
         }
     }
 }
