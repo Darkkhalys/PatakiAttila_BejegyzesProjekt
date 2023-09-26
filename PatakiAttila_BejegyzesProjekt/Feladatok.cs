@@ -31,6 +31,7 @@ namespace PatakiAttila_BejegyzesProjekt
              } */
             Legnepszerubb();
             Nepszeru();
+            KevesLajk();
         }
 
         private void ListaFeltolt()
@@ -120,7 +121,7 @@ namespace PatakiAttila_BejegyzesProjekt
 
             for (int i = 0; i < beir.Count; i++)
             {
-                if (beir[i].Like>=35)
+                if (beir[i].Like>35)
                 {
                     nepszeru = true;
                 }
@@ -134,6 +135,22 @@ namespace PatakiAttila_BejegyzesProjekt
             {
                 Console.WriteLine("Nincs olyan bejegyzés mi 35-nél több like-ot kapott");
             }
+        }
+
+        private void KevesLajk()
+        {
+            int szamlalo=0;
+            for (int i = 0; i < beir.Count; i++)
+            {
+                if (15>beir[i].Like)
+                {
+                    szamlalo++;
+                }
+            }
+            Console.WriteLine($"{szamlalo} db bejegyzés van, ami 15 likenál kevesebbett kapott");
+
+
+
         }
     }
 }
