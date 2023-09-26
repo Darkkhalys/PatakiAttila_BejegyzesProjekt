@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace PatakiAttila_BejegyzesProjekt
 {
@@ -42,10 +43,25 @@ namespace PatakiAttila_BejegyzesProjekt
                     
                 }
 
-               
+         
             }
             
         }
+
+        private void Beolv()
+        {
+            StreamReader sr = new StreamReader("bejegyzesek.csv");
+            
+            while (!sr.EndOfStream)
+            {
+                string[] adatok = sr.ReadLine().Split(';');
+                string szerzo = adatok[0];
+                string tartalom = adatok[1];
+                Bejegyzes b = new Bejegyzes(szerzo,tartalom);
+                bejegyzes.Add(b);
+            }
+        }
+
 
 
     }
